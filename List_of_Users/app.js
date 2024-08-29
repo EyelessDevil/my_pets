@@ -67,12 +67,12 @@ list.onclick = function (event) {
         ymaps.ready(init)
 
         function init() {
-            var map = new ymaps.Map("map", {
+            let map = new ymaps.Map("map", {
                 center: [user.address.geo.lat, user.address.geo.lng],
                 zoom: 3
             })
 
-            var placemark = new ymaps.Placemark([user.address.geo.lat, user.address.geo.lng], {
+            let placemark = new ymaps.Placemark([user.address.geo.lat, user.address.geo.lng], {
                 balloonContent: `<strong>${user.name}</strong><br>${user.address.street}, ${user.address.city}`
             })
 
